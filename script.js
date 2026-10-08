@@ -21,6 +21,7 @@ function calculateAttendance(totalClasses, attendedClasses) {
 if (typeof document !== "undefined") {
   const form = document.getElementById("attendanceForm");
   const result = document.getElementById("result");
+  const resetButton = document.getElementById("resetButton");
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -42,9 +43,14 @@ if (typeof document !== "undefined") {
     }
 
     result.innerHTML = `
-      <strong>${studentName}'s Attendance: ${attendance.percentage.toFixed(2)}%</strong><br>
-      Status: ${attendance.status}
-    `;
+    <strong>${studentName}'s Attendance: ${attendance.percentage.toFixed(2)}%</strong><br>
+    Status: ${attendance.status}
+  `;
+  });
+
+  resetButton.addEventListener("click", function () {
+    form.reset();
+    result.textContent = "";
   });
 }
 
