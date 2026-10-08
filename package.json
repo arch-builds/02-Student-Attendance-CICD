@@ -1,0 +1,8 @@
+{
+  "name": "02-student-attendance-cicd",
+  "version": "1.0.0",
+  "description": "Student Attendance Checker assignment demonstrating Git, GitHub, CI, CD, and GitHub Pages.",
+  "scripts": {
+    "test": "node --test"
+  }
+}
